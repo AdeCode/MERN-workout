@@ -8,6 +8,14 @@ const {
 //GET all workouts
 router.get('/workouts', getAllWorkouts)
 
+router.get('/learn', (req, res) => {
+    res.json({msg:'New Get request'})
+})
+
+router.post('/learn-save', (req, res) => {
+    res.send({msg:'New Get request from post', body: req.body})
+})
+
 //GET a single workout
 router.get('/workout/:id', getWorkout)
 
